@@ -4,7 +4,7 @@ class Solution {
         {
             for(int k=i+1;k<nums.length;k++)
             {
-                // checking the sum element with next element
+                // checking the sum,one element with next element
                if(nums[i]+nums[k]==target)
                {
                   return new int[]{i,k};
