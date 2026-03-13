@@ -6,7 +6,6 @@ class Solution {
         {
             if(hm.containsKey(nums[i]))
             {
-                hm.put(nums[i],hm.get(nums[i])+1);
                 found=true;
                 break;
             }
