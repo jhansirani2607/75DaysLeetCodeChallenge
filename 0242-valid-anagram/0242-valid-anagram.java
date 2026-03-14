@@ -4,32 +4,10 @@ class Solution {
         {
             return false;
         }
-        HashMap<Character,Integer>hm=new HashMap<>();
-        for(int i=0;i<s.length();i++)
-        {
-            char ch=s.charAt(i);
-            if(hm.containsKey(ch))
-            {
-                hm.put(ch,hm.get(ch)+1);
-            }
-            else
-            {
-                hm.put(ch,1);
-            }
-        }
-        for(int i=0;i<t.length();i++)
-        {
-            char ch=t.charAt(i);
-            if(!hm.containsKey(ch))
-            {
-                return false;
-            }
-            hm.put(ch,hm.get(ch)-1);
-            if(hm.get(ch)==0)
-            {
-                hm.remove(ch);
-            }
-        }
-        return hm.size()==0?true:false;
+        char ss[]=s.toCharArray();
+        char tt[]=t.toCharArray();
+        Arrays.sort(ss);
+        Arrays.sort(tt);
+        return Arrays.equals(ss,tt);
     }
 }
